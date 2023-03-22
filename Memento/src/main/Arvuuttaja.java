@@ -7,8 +7,8 @@ public class Arvuuttaja {
 	}
 
 	public Integer tarkastaLuku(Object o, int arvaus) {
+		
 		Memento mem = (Memento) o;
-
 		if (mem.luku == arvaus) {
 			return mem.luku;
 
