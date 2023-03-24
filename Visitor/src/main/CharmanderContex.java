@@ -55,6 +55,7 @@ public class CharmanderContex implements Element {
 	@Override
 	public void accept(Visitor visitor) {
 		visitor.visit(this);
+		//delegointi tilalle olisi tuntunut turhalle monimutkaistamiselle
 	}
 
 	public int getBonusPoints() {
