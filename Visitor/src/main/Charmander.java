@@ -13,34 +13,40 @@ public class Charmander implements Pokemon{
 	}
 
 	@Override
-	public void run(CharmanderContex p) {
+	public void run(Contex p) {
 		System.out.println("Charmander running...");
 		
 		
 	}
 
 	@Override
-	public void jump(CharmanderContex p) {
+	public void jump(Contex p) {
 		System.out.println("Charmander jumping...");
 		
 		
 	}
 
 	@Override
-	public void fly(CharmanderContex p) {
+	public void fly(Contex p) {
 		System.out.println("Charmander flying...");	
 		
 	}
 
 
 	@Override
-	public void changePokemon(CharmanderContex c, Pokemon p) {
+	public void changePokemon(Contex c, Pokemon p) {
 		c.setPokemonState(p);
 	}
 
 	@Override
 	public  String getName() {
 		return name;
+	}
+
+	@Override
+	public void accept(Visitor visitor, Contex c) {
+		visitor.visit(this, c);
+		
 	}
 
 

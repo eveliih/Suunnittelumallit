@@ -1,10 +1,11 @@
 package main;
 
 public interface Pokemon{
-	void run(CharmanderContex p);
-	void jump(CharmanderContex p);
-	void fly(CharmanderContex p);
-	void changePokemon(CharmanderContex c, Pokemon p);
+	void run(Contex p);
+	void jump(Contex p);
+	void fly(Contex p);
+	void changePokemon(Contex c, Pokemon p);
+	void accept(Visitor visitor, Contex c);
 	String getName();
-	//void accept(Visitor visitor);
+	
 }

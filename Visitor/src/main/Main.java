@@ -3,21 +3,30 @@ package main;
 public class Main {
 
 	public static void main(String[] args) {
-		CharmanderContex poke = new CharmanderContex();
+		CharmanderContex charmander = new CharmanderContex();
+		AbraContex abra = new AbraContex();
+
 		Visitor bonusVisitor = new BonusVisitor();
-		
-		
-		System.out.println("bonukset: " + poke.getBonusPoints());
-		for(int i = 0; i < 60; i++) {
-			poke.runPokemon();
-			poke.flyPokemon();
-			poke.jumpPokemon();
-			poke.accept(bonusVisitor);
+
+		System.out.println("Bonukset\nCharmander: " + charmander.getBonusPoints() + "\nAbra: " + abra.getBonusPoints() + "\n");
+
+		for (int i = 0; i < 50; i++) {
+			charmander.runPokemon();
+			abra.runPokemon();
+			charmander.flyPokemon();
+			abra.flyPokemon();
+			charmander.jumpPokemon();
+			abra.jumpPokemon();
+
 		}
-		
-		
-		System.out.println("bonukset: " + poke.getBonusPoints());
-		
+
+		charmander.accept(bonusVisitor);
+		abra.accept(bonusVisitor);
+
+		System.out.println("Bonukset\nCharmander: " + charmander.getBonusPoints() + " (tila: "
+				+ charmander.getPokemonState().getName() + ") \nAbra: " + abra.getBonusPoints() + " (tila: "
+				+ abra.getPokemonState().getName() + ")");
+
 	}
 
 }

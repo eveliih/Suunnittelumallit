@@ -1,46 +1,47 @@
+
 package main;
 
-public class Charmeleon implements Pokemon {
-	private static Charmeleon INSTANCE = null;
-	public static final String name = "Charmeleon";
+public class Alakazam implements Pokemon {
 
-	public static Charmeleon getInstance() {
+	private static Alakazam INSTANCE = null;
+	public static final String name = "Alakazam";
+
+	public static Alakazam getInstance() {
 
 		if (INSTANCE == null) {
-			INSTANCE = new Charmeleon();
+			INSTANCE = new Alakazam();
 		}
 		return INSTANCE;
 	}
 
 	@Override
 	public void run(Contex p) {
-		System.out.println("Charmeleon running...");
-	
-
+		System.out.println("Alakazam running...");
+		
+		
 	}
 
 	@Override
 	public void jump(Contex p) {
-		System.out.println("Charmeleon jumping...");
+		System.out.println("Alakazam jumping...");
 		
-
+		
 	}
 
 	@Override
 	public void fly(Contex p) {
-		System.out.println("Charmeleon flying...");
+		System.out.println("Alakazam flying...");	
 		
-
 	}
+
 
 	@Override
 	public void changePokemon(Contex c, Pokemon p) {
 		c.setPokemonState(p);
-
 	}
 
 	@Override
-	public String getName() {
+	public  String getName() {
 		return name;
 	}
 
@@ -49,6 +50,5 @@ public class Charmeleon implements Pokemon {
 		visitor.visit(this, c);
 		
 	}
-
 
 }
